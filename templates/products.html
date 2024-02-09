@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .product {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .product-info {
+            padding: 10px 0;
+        }
+        .user-info {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+    </style>
+</head>
+<body>    
+    <div class="container">
+        <div class="user-info">
+            <a href="/profile">username</a>
+        </div>
+        <h1>Computer Components</h1>
+        <div class="product">
+            <img src="motherboard.jpg" alt="Motherboard">
+            <div class="product-info">
+                <h2>Motherboard</h2>
+                <p>Description: High-performance motherboard for gaming PCs.</p>
+                <p>Price: $150</p>
+                <form action="/add-to-cart" method="POST">
+                    <input type="hidden" name="user_id" value="{{ user_id }}">
+                    <input type="hidden" name="product_name" value="Motherboard">
+                    <input type="hidden" name="price" value="150">
+                    <button type="submit">Add to Cart</button>
+                </form>
+            </div>
+        </div>
+        <div class="product">
+            <img src="cpu.jpg" alt="CPU">
+            <div class="product-info">
+                <h2>CPU (Processor)</h2>
+                <p>Description: Quad-core processor with high clock speed.</p>
+                <p>Price: $250</p>
+                <form action="/add-to-cart" method="POST">
+                    <input type="hidden" name="user_id" value="{{ user_id }}">
+                    <input type="hidden" name="product_name" value="CPU">
+                    <input type="hidden" name="price" value="250">
+                    <button type="submit">Add to Cart</button>
+                </form>
+
+            </div>
+        </div>
+        <div class="product">
+            <img src="gpu.jpg" alt="GPU">
+            <div class="product-info">
+                <h2>GPU (Graphics Card)</h2>
+                <p>Description: Dedicated graphics card for smooth gaming experience.</p>
+                <p>Price: $400</p>
+                <form action="/add-to-cart" method="POST">
+                    <input type="hidden" name="user_id" value="{{ user_id }}">
+                    <input type="hidden" name="product_name" value="GPU">
+                    <input type="hidden" name="price" value="400">
+                    <button type="submit">Add to Cart</button>
+                </form>
+            </div>
+        </div>
+        <div class="product">
+            <img src="ssd.jpg" alt="SSD">
+            <div class="product-info">
+                <h2>SSD (Solid State Drive)</h2>
+                <p>Description: High-speed solid state drive for fast data access.</p>
+                <p>Price: $100</p>
+                <form action="/add-to-cart" method="POST">
+                    <input type="hidden" name="user_id" value="{{ user_id }}">
+                    <input type="hidden" name="product_name" value="POST">
+                    <input type="hidden" name="price" value="100">
+                    <button type="submit">Add to Cart</button>
+                </form>
+            </div>
+        </div>
+        <div class="product">
+            <img src="ram.jpg" alt="RAM">
+            <div class="product-info">
+                <h2>RAM (Random Access Memory)</h2>
+                <p>Description: 16GB DDR4 RAM for multitasking and gaming.</p>
+                <p>Price: $120</p>
+                <form action="/add-to-cart" method="POST">
+                    <input type="hidden" name="user_id" value="{{ user_id }}">
+                    <input type="hidden" name="product_name" value="RAM">
+                    <input type="hidden" name="price" value="120">
+                    <button type="submit">Add to Cart</button>
+                </form>
+            </div>
+        </div>
+        <div class="product">
+            <img src="monitor.jpg" alt="Monitor">
+            <div class="product-info">
+                <h2>Monitor</h2>
+                <p>Description: 27-inch gaming monitor with high refresh rate.</p>
+                <p>Price: $300</p>
+                <form action="/add-to-cart" method="POST">
+                    <input type="hidden" name="user_id" value="{{ user_id }}">
+                    <input type="hidden" name="product_name" value="Monitor">
+                    <input type="hidden" name="price" value="300">
+                    <button type="submit">Add to Cart</button>
+                </form>
+            </div>
+        </div>
+        <div class="product">
+            <img src="keyboard.jpg" alt="Keyboard">
+            <div class="product-info">
+                <h2>Keyboard</h2>
+                <p>Description: Mechanical gaming keyboard with RGB lighting.</p>
+                <p>Price: $80</p>
+                <form action="/add-to-cart" method="POST">
+                    <input type="hidden" name="user_id" value="{{ user_id }}">
+                    <input type="hidden" name="product_name" value="Keyboard">
+                    <input type="hidden" name="price" value="80">
+                    <button type="submit">Add to Cart</button>
+                </form>                 
+            </div>
+        </div>
+    </div>
+</body>
+</html>
